@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Text Classification</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Text Classifier</h2>
+        <form method="post">
+            <textarea name="text" placeholder="Enter your text here..."></textarea>
+            <input type="submit" value="Classify">
+        </form>
+        {% if classification %}
+            <h3>Classification: {{ classification }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
